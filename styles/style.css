@@ -1,0 +1,159 @@
+@font-face {
+    font-family: 'vazie';
+    src: url('../fonts/vazir.eot');
+    src: url('../fonts/vazir.ttf')  format('truetype'),
+         url('../fonts/vazir.woff2') format('woff2'),
+         url('../fonts/vazir.woff') format('woff');
+  }
+
+  *{
+      padding: 0;
+      margin: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body{
+      font-family: 'vazir';
+     direction: rtl;
+      position: relative;
+  }
+
+  ul {
+    list-style: none;
+  }
+  a {
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .btn {
+    width: 8rem;
+    height: 2.5rem;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    background-color: transparent;
+    font-size: 18px;
+    transition: .3s;
+  }
+  .btn-succes {
+    background-color: rgb(21, 180, 212);
+  }
+  .btn-succes:hover {
+    background-color: rgba(21, 180, 212, 0.779);
+  }
+.container {
+    position: relative;
+    width: 1400px;
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  .content {
+    width: 100%;
+    height: 98vh;
+    transform-origin: top right;
+    transition: .4s;
+  }
+  .content.active {
+    transform: rotate(15deg);
+  }
+  .content img {
+    width: 100%;
+    height: 100%;
+  }
+.nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    overflow: hidden;
+    width: 100px;
+    height: 100px;
+}
+.menu {
+    background-color: #fff;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: .5s ease-in-out;
+    transform: rotate(-181deg);
+    position: absolute;
+    right: -50px;
+}
+.menu.active {
+    transform: rotate(-360deg);
+}
+.menu svg {
+    font-size: 20px;
+    cursor: pointer;
+    padding: 15px;
+}
+.navbar {
+    position: absolute;
+    bottom: 0;
+    right: -130px;
+    width: 150px;
+    transition: .3s;
+}
+.navbar.active {
+    right: 0;
+}
+ul a {
+    margin-right: 7px;
+}
+ul li {
+    padding: 3px;
+}
+.navbar.active li:nth-child(1) {
+    animation: one .3s forwards;
+}
+.navbar.active li:nth-child(2) {
+    animation: two .3s forwards;
+}
+.navbar.active li:nth-child(3) {
+    animation: three 3s forwards;
+}
+.navbar.active li:nth-child(4) {
+    animation: four 3s forwards;
+    animation-delay: .7s;
+}
+@keyframes one {
+    0% {
+        margin-right: 0px;
+    }
+    100% {
+        margin-right: 5px;
+    }
+}
+@keyframes two {
+    0% {
+        margin-right: 0px;
+    }
+    100% {
+        margin-right: 15px;
+    }
+}
+@keyframes three {
+    0% {
+        margin-right: 0px;
+    }
+    100% {
+        margin-right: 25px;
+    }
+}
+@keyframes four {
+    0% {
+        margin-right: 0px;
+    }
+    100% {
+        margin-right: 35px;
+    }
+}
